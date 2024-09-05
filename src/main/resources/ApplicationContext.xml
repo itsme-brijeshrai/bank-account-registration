@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean definition for myUser -->
+    <bean id="myUser" class="com.codingNinjas.Bank.Account.Registration.myUser" scope="singleton">
+        <!-- No need to set accountList property -->
+    </bean>
+
+    <!-- Bean definition for currentAccount -->
+    <bean id="currentAccount" class="com.codingNinjas.Bank.Account.Registration.currentAccount" scope="prototype">
+        <constructor-arg value="0.0"/>
+    </bean>
+
+    <!-- Bean definition for savingsAccount -->
+    <bean id="savingsAccount" class="com.codingNinjas.Bank.Account.Registration.savingsAccount" scope="prototype">
+        <constructor-arg value="0.0"/>
+    </bean>
+
+</beans>
